@@ -22,7 +22,7 @@ RUN \
                   which \
                   jq \
                   rsync \
-                  python-pip
+                  python-pip \
                   privoxy && \
   yum clean all && \
   easy_install supervisor \
