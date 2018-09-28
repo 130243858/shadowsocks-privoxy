@@ -1,0 +1,12 @@
+{
+    "server":"0.0.0.0",      
+    "server_port":9090, 
+    "local_address": "0.0.0.0",  
+    "local_port":1080,              
+    "password":"1234566",
+    "timeout":300,                  
+    "method":"aes-256-cfb",             
+    "fast_open": false,             
+    "workers": 1                   
+}
+

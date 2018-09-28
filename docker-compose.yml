@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  supervisor:
+    container_name: ss_supervisor
+    build: ./dir 
+    ports:
+      - "8118:8118"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
