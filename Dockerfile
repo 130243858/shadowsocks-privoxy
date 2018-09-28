@@ -34,5 +34,4 @@ COPY shadowsocks/shadowsocks.json /data/www/
 COPY supervisord/ss.conf   /etc/supervisor.d/
 COPY privoxy/config        /etc/privoxy/config
 
-
 ENTRYPOINT ["/config/bootstrap.sh"]

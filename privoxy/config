@@ -1,10 +1,10 @@
 confdir /etc/privoxy
 logdir /var/log/privoxy
-actionsfile match-all.action 
-actionsfile default.action 
-actionsfile user.action 
+actionsfile match-all.action
+actionsfile default.action
+actionsfile user.action
 filterfile default.filter
-filterfile user.filter 
+filterfile user.filter
 logfile logfile
 
 #主要修改这两行
