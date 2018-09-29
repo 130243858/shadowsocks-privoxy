@@ -16,22 +16,23 @@ RUN \
   yum install -y \
                   iproute \
                   python-setuptools \
+                  python-pip \
+                  privoxy \
                   hostname \
                   inotify-tools \
                   yum-utils \
                   which \
                   jq \
-                  rsync \
-                  python-pip \
-                  privoxy && \
+                  rsync && \
   yum clean all && \
-  easy_install supervisor \
+  easy_install supervisor && \
   pip install shadowsocks
 
 # Add supervisord conf, bootstrap.sh files
 COPY container-files /
 COPY shadowsocks/shadowsocks.json /data/www/
-COPY supervisord/ss.conf   /etc/supervisor.d/
 COPY privoxy/config        /etc/privoxy/config
+COPY supervisord/ss.conf   /etc/supervisor.d/
+COPY supervisord/privoxy.conf   /etc/supervisor.d/
 
 ENTRYPOINT ["/config/bootstrap.sh"]
