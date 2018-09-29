@@ -4,7 +4,7 @@ services:
 
   supervisor:
     container_name: ss_pr_supervisor
-    build: ./dir
+    build: ./
     ports:
       - "8118:8118"
     volumes:
